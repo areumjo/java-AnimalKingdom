@@ -92,8 +92,14 @@ public class Main
         System.out.println();
 
         System.out.println("*** List alphabetically only named in 1758 ***");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimal(animalList, a -> a.getYear() == 1758);
         System.out.println();
         
+        System.out.println("***** Stretch Goal *****");
+        System.out.println("*** List only mammals alphabetically ***");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        printAnimal(animalList, a -> a instanceof Mammals);
+        System.out.println();
     }
 }
