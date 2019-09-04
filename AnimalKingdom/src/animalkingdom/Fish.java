@@ -4,13 +4,13 @@ public class Fish extends Animals
 {
     public String name;
     int number;
-    int year;
+    public int year;
 
     public Fish(String name, int year)
     {
-        super();
-        this.name = name;
-        this.year = year;
+        super(name, year);
+        // this.name = name;
+        // this.year = year;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Fish extends Animals
     public String toString()
     {
         return "Fish{" +
-                "name= " + name + "\'" +
+                "name= " + name +
                 ", year= " + year + "}";
     }
 } 
